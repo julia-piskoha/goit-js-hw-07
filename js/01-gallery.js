@@ -5,10 +5,6 @@ const galleryList = makeGalleryItems(galleryItems);
 gallery.insertAdjacentHTML("beforeend", galleryList);
 gallery.addEventListener("click", (e) => {
   e.preventDefault();
-  const image = e.target.classList.contains(".gallery");
-  if (!image) {
-    return;
-  }
   const instance = basicLightbox.create(
     `<img src="${e.target.dataset.source}" width="800" height="600"/>`,
     {
